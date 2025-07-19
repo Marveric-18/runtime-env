@@ -1,0 +1,39 @@
+{
+  "name": "runtime-env",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts --prefix=LOL1",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "build": "tsup"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "runtime-env": "./dist/index.js"
+  },
+  "keywords": [
+    
+  ],
+  "author": "Marven Parmar (https://marvenparmar.com)",
+  "license": "ISC",
+  "description": "runtime-env package is a npm package configured with Azure keyvault and AWS secret manager to build .env file on runtime.",
+  "dependencies": {
+    "@azure/identity": "^4.8.0",
+    "@azure/keyvault-secrets": "^4.9.0",
+    "@types/yargs": "^17.0.33",
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.9",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}
